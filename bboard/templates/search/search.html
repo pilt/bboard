@@ -3,9 +3,7 @@
 {% load humanize %}
 {% load cache %}
 
-{% if query %}
-    {% block header_title %}{{query}}{% endblock %}
-{% endif %}
+{% block header_title %}{{query|default:block.super}}{% endblock %}
 
 {% block content %}
     <form id="search-form" method="get" action=".">
