@@ -1,0 +1,15 @@
+ipython
+Fabric
+http://www.djangoproject.com/download/1.3-beta-1/tarball/#egg=Django
+django-annoying
+django-debug-toolbar
+django-sentry
+django-haystack
+nexus
+nexus_memcache
+South
+psycopg2
+python-memcached
+httplib2
+liu-anslagstavlan
+pysolr

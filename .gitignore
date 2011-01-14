@@ -1,0 +1,14 @@
+bin
+build
+include
+lib
+lib64
+share
+src
+core.*
+*.pyc
+apache-solr-*
+*.tgz
+*.tar.gz
+.*cache*
+*.zip

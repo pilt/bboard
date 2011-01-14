@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load highlight %}
+{% load humanize %}
+{% load cache %}
+
+{% if query %}
+    {% block header_title %}{{query}}{% endblock %}
+{% endif %}
+
+{% block content %}
+    <form id="search-form" method="get" action=".">
+        <div id="search-box">
+            <input tabindex="1" autocomplete="off" type="text" name="q" value="{{form.q.value|default:''}}">
+            <input tabindex="2" type="submit" value="&raquo;"><br>
+            {% if query %}
+            <small><a id="toggle-alts" href="#alternatives">{% trans "search alternatives" %}</a></small>
+            {% endif %}
+        </div>
+        
+        {% if query %}
+
+        <div id="alts" class="ui-widget-content ui-corner-all">
+            <dl>
+            {% for alt in alternatives %}
+                <dt>{{alt.name}}</dt>
+                {% for link in alt.links %}
+                <dd>
+                    <a href="{{link.url}}">{{link.text}}</a>
+                </dd>
+                {% endfor %}
+            {% endfor %}
+            </dl>
+        </div>
+
+        <div id="results" class="clearfix">
+            {% for result in page.object_list %}
+                <div class="result">
+                    <h3>{{ result.object.title }}</h3>
+                    <div class="meta">
+                        {{ result.object.submitted|timesince }} {% trans "ago" %} {% trans "by" %}
+                        {{ result.object.mail|urlize }}
+                    </div>
+                    <p class="body">
+                    {{ result.object.body|striptags|urlize|linebreaksbr}}
+                    </p>
+                </div>
+            {% empty %}
+                <p style="" class="no-results help">{% trans "nothing found" %}</p>
+            {% endfor %}
+        </div>
+
+        {% if page.has_previous or page.has_next %}
+            <div class="pager clearfix">
+                <div class="prev">
+                {% if page.has_previous %}<a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">{% endif %}&laquo; {% if page.has_previous %}</a>{% endif %}
+                </div>
+
+                <div class="next">
+                {% if page.has_next %}<a href="?q={{ query }}&amp;page={{ page.next_page_number }}">{% endif %}&raquo;{% if page.has_next %}</a>{% endif %}
+                </div>
+            </div>
+        {% endif %}
+
+        {% else %}
+
+        {% if latest_searches|length %}
+        <div id="latest-searches">
+            <h2>{% trans "latest searches" %}</h2>
+            <p>
+            {% for search in latest_searches %}
+                <strong>
+                    <a href="{% url board_search %}?q={{search.term|escape}}">{{search.term}}</a>
+                </strong>
+                <small>
+                {% blocktrans with search.when|timesince as since count search.hit_count as hit_count %}
+                    {{hit_count}} hit {{since}} ago
+                    {% plural %}
+                    {{hit_count}} hits {{since}} ago
+                {% endblocktrans %}
+                </small><br>
+            {% endfor %}
+            </p>
+        </div>
+        {% endif %}
+
+        {% endif %}
+    </form>
+{% endblock %}

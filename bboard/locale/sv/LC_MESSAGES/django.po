@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-01-14 18:30+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+
+#: board/models.py:13 board/models.py:29
+msgid "remote id"
+msgstr "fjärrid"
+
+#: board/models.py:14 board/models.py:30
+msgid "title"
+msgstr "titel"
+
+#: board/models.py:15
+msgid "email address of the poster"
+msgstr "epostadress till annonsören"
+
+#: board/models.py:16
+msgid "submitted at"
+msgstr "inlagd den"
+
+#: board/models.py:17
+msgid "body of the entry"
+msgstr "text i inlägget"
+
+#: board/models.py:18 board/models.py:33
+msgid "category"
+msgstr "kategori"
+
+#: board/models.py:21
+msgid "entry"
+msgstr "inlägg"
+
+#: board/models.py:22
+msgid "entries"
+msgstr "inlägg"
+
+#: board/models.py:34
+msgid "categories"
+msgstr "kategorier"
+
+#: board/models.py:41
+msgid "term"
+msgstr ""
+
+#: board/models.py:42
+msgid "hit count"
+msgstr ""
+
+#: board/models.py:43
+msgid "when"
+msgstr ""
+
+#: board/models.py:46
+msgid "search"
+msgstr "sökning"
+
+#: board/models.py:47
+msgid "searches"
+msgstr "sökningar"
+
+#: board/views.py:143
+msgid "books"
+msgstr "böcker"
+
+#: board/views.py:145
+msgid "search adlibris"
+msgstr "sök på adlibris"
+
+#: board/views.py:150
+msgid "search bokus"
+msgstr "sök på bokus"
+
+#: board/views.py:155
+msgid "other"
+msgstr ""
+
+#: board/views.py:157
+msgid "search at LiU"
+msgstr "sök på LiU"
+
+#: templates/base.html:12 templates/base.html.py:35
+msgid "proxy board"
+msgstr "proxytavlan"
+
+#: templates/base.html:37
+msgid ""
+"\n"
+"        indexes <a href=\"http://www.student.liu.se/anslagstavlan\">the "
+"bulletin boards of Linköping University</a>\n"
+"        "
+msgstr ""
+"\n"
+"        indexerar <a href=\"http://www.student.liu.se/anslagstavlan"
+"\">Linköpings universitets anslagstavla</a>\n"
+"        "
+
+#: templates/search/search.html:15
+msgid "search alternatives"
+msgstr "sökalternativ"
+
+#: templates/search/search.html:39
+msgid "ago"
+msgstr "sedan"
+
+#: templates/search/search.html:39
+msgid "by"
+msgstr "av"
+
+#: templates/search/search.html:47
+msgid "nothing found"
+msgstr "inget hittades"
+
+#: templates/search/search.html:67
+msgid "latest searches"
+msgstr "senaste sökningar"
+
+#: templates/search/search.html:74
+#, python-format
+msgid ""
+"\n"
+"                    %(hit_count)s hit %(since)s ago\n"
+"                    "
+msgid_plural ""
+"\n"
+"                    %(hit_count)s hits %(since)s ago\n"
+"                "
+msgstr[0] ""
+"\n"
+"                    %(hit_count)s träff för %(since)s sedan\n"
+"                    "
+msgstr[1] ""
+"\n"
+"                    %(hit_count)s träffar för %(since)s sedan\n"
+"                "
+

@@ -1,0 +1,6 @@
+install fabric
+install postgresql
+install postgresql-devel
+install postgresql-server
+run
+exit
