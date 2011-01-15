@@ -192,7 +192,7 @@ class SearchView(object):
                     LIU_SEARCH_BASE,
                     lambda a: urlencode(dict(
                         LIU_SEARCH_ARGS.items() + [
-                            ('px_string', a.encode('latin-1')),
+                            ('px_string', a.encode('utf-8')),
                         ]
                     )),
                 ),
