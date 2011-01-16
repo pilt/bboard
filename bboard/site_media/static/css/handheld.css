@@ -1,8 +1,9 @@
-* {
-  float: none;       
-  background: #fff;  
-  color: #000;
+body {
+    font-size: 10px;
 }
-
-
-body { font-size: 80%; }
+header {
+    font-size: 1em;
+}
+header h1 {
+    font-size: 1.5em;
+}

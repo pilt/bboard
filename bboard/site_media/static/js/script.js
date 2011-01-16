@@ -12,7 +12,8 @@ $(document).ready(function() {
         source: function(req, add) {
             $.getJSON("", req, add);
         },
-        select: function() {
+        select: function(ev, ui) {
+            $('#search-form input[type=text]').attr('value', ui.item.value);
             $('#search-form').submit();
         }
     });

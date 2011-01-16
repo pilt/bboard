@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-14 18:30+0100\n"
+"POT-Creation-Date: 2011-01-16 03:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -73,31 +73,31 @@ msgstr "sökning"
 msgid "searches"
 msgstr "sökningar"
 
-#: board/views.py:143
+#: board/views.py:177
 msgid "books"
 msgstr "böcker"
 
-#: board/views.py:145
+#: board/views.py:179
 msgid "search adlibris"
 msgstr "sök på adlibris"
 
-#: board/views.py:150
+#: board/views.py:184
 msgid "search bokus"
 msgstr "sök på bokus"
 
-#: board/views.py:155
+#: board/views.py:189
 msgid "other"
-msgstr ""
+msgstr "övrigt"
 
-#: board/views.py:157
+#: board/views.py:191
 msgid "search at LiU"
 msgstr "sök på LiU"
 
-#: templates/base.html:12 templates/base.html.py:35
+#: templates/base.html:12 templates/base.html.py:40
 msgid "proxy board"
 msgstr "proxytavlan"
 
-#: templates/base.html:37
+#: templates/base.html:42
 msgid ""
 "\n"
 "        indexes <a href=\"http://www.student.liu.se/anslagstavlan\">the "
@@ -109,27 +109,27 @@ msgstr ""
 "\">Linköpings universitets anslagstavla</a>\n"
 "        "
 
-#: templates/search/search.html:15
+#: templates/search/search.html:14
 msgid "search alternatives"
 msgstr "sökalternativ"
 
-#: templates/search/search.html:39
+#: templates/search/search.html:38
 msgid "ago"
 msgstr "sedan"
 
-#: templates/search/search.html:39
+#: templates/search/search.html:38
 msgid "by"
 msgstr "av"
 
-#: templates/search/search.html:47
+#: templates/search/search.html:46
 msgid "nothing found"
 msgstr "inget hittades"
 
-#: templates/search/search.html:67
+#: templates/search/search.html:66
 msgid "latest searches"
 msgstr "senaste sökningar"
 
-#: templates/search/search.html:74
+#: templates/search/search.html:73
 #, python-format
 msgid ""
 "\n"
@@ -147,4 +147,3 @@ msgstr[1] ""
 "\n"
 "                    %(hit_count)s träffar för %(since)s sedan\n"
 "                "
-

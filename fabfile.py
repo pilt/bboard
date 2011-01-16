@@ -101,13 +101,13 @@ def init_db(drop='no'):
 
     drop = yesno(drop)
 
-    username = settings.DATABASE_USER
-    password = settings.DATABASE_PASSWORD
-    engine = settings.DATABASE_ENGINE
-    host = settings.DATABASE_HOST
-    db_name = settings.DATABASE_NAME
+    username = settings.DATABASES['default']['USER']
+    password = settings.DATABASES['default']['PASSWORD']
+    engine = settings.DATABASES['default']['ENGINE']
+    host = settings.DATABASES['default']['HOST']
+    db_name = settings.DATABASES['default']['NAME']
 
-    supported_engine = 'postgresql_psycopg2'
+    supported_engine = 'django.db.backends.postgresql_psycopg2'
     if engine != supported_engine:
         abort('engine %r unsupported (must be %r)' % (engine, supported_engine))
 
